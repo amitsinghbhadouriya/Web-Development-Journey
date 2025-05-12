@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Position Property</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky; /* Sticks to top */
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: darkblue;
+    }
+
+    .demo-container {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    .static {
+      background-color: teal;
+      position: static; /* Default */
+    }
+
+    .relative {
+      background-color: tomato;
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+
+    .absolute-container {
+      position: relative; /* Needed for absolute positioning */
+    }
+
+    .absolute {
+      background-color: purple;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .fixed {
+      background-color: darkgreen;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .sticky-box {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+    }
+
+    .spacer {
+      height: 120vh;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Services</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>1. Static Position (Default)</h2>
+    <p><strong>position: static</strong> — This is the default value. Elements appear in normal document flow, top to bottom, left to right.</p>
+    <div class="demo-container">
+      <div class="box static">Static</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Relative Position</h2>
+    <p><strong>position: relative</strong> — Moves the element relative to its original position without affecting other elements.</p>
+    <div class="demo-container">
+      <div class="box relative">Relative</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Absolute Position</h2>
+    <p><strong>position: absolute</strong> — Positions the element relative to the nearest positioned ancestor. It is removed from normal flow.</p>
+    <div class="demo-container absolute-container">
+      <div class="box absolute">Absolute</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Fixed Position</h2>
+    <p><strong>position: fixed</strong> — Sticks the element to the viewport. It stays in place even when you scroll.</p>
+    <div class="demo-container">
+      <p>Scroll down to see the fixed box stick to the screen.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Sticky Position</h2>
+    <p><strong>position: sticky</strong> — Acts like relative until it reaches a specified scroll position, then behaves like fixed.</p>
+    <div class="demo-container">
+      <div class="box sticky-box">Sticky</div>
+      <p>Scroll this section to see the sticky box stick at the top.</p>
+      <div class="spacer"></div>
+    </div>
+  </section>
+
+  <div class="box fixed">Fixed</div>
+
+</body>
+</html>

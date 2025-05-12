@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .container {
+            background-color: yellow;
+            display: grid;
+            height: 56vh;
+            grid-gap: 9px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .item {
+            background-color: aquamarine;
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .explanation {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .explanation h2 {
+            color: #333;
+        }
+
+        .explanation code {
+            background-color: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="explanation">
+        <h2>What is CSS Grid?</h2>
+        <p>CSS Grid Layout is a two-dimensional layout system for the web. It lets you layout items in rows and columns,
+            making complex designs much simpler to implement compared to older methods like floats or inline-block.</p>
+
+        <h3>Key Properties Used:</h3>
+        <ul>
+            <li><code>display: grid;</code> — Turns the container into a grid layout.</li>
+            <li><code>grid-template-columns: repeat(4, 1fr);</code> — Defines 4 equal-width columns.</li>
+            <li><code>grid-gap: 9px;</code> — Adds 9px space between grid rows and columns.</li>
+            <li><code>1fr</code> — A fraction of the available space in the grid container.</li>
+        </ul>
+
+        <h3>Responsive Grid:</h3>
+        <p>Using <code>@media</code> queries, the number of columns can adapt based on screen size:</p>
+        <ul>
+            <li><code>repeat(2, 1fr)</code> for tablets and medium screens.</li>
+            <li><code>1fr</code> (one column) for small screens or phones.</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+
+</html>

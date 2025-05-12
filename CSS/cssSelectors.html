@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Element Selector */
+        h1 {
+            color: rgb(14, 78, 240);
+            font-size: 2rem;
+            padding: 10px;
+        }
+
+        /* Group Selector */
+        div, h2 {
+            color: white;
+            background-color: rgb(152, 99, 146);
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* ID Selector */
+        #red {
+            color: black;
+            background-color: aquamarine;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Class Selector */
+        .blue {
+            color: white;
+            background-color: blue;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Child Selector */
+        div > p {
+            font-style: italic;
+            color: gray;
+        }
+
+        /* Descendant Selector */
+        div p {
+            font-size: 1rem;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Attribute Selector */
+        a[href^="https"] {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="red">
+        <h1>What is CSS Selectors?</h1>
+        <p>CSS selectors are patterns used in Cascading Style Sheets (CSS) to target and apply styles to specific HTML elements on a web page. They help the browser identify which elements should be styled based on their tag name, class, ID, attributes, or position within the HTML structure.</p>
+    </div>
+
+    <div>
+        <h2>Types of Selectors</h2>
+        <ul>
+            <li class="blue">Universal Selector</li>
+            <li class="blue">Element Selector</li>
+            <li class="blue">Class Selector</li>
+            <li class="blue">ID Selector</li>
+            <li class="blue">Group Selector</li>
+            <li class="blue">Child Selector</li>
+            <li class="blue">Attribute Selector</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>To learn more, visit <a href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors Documentation</a>.</p>
+        <p>For tutorials, check out <a href="http://www.example.com">Example Website</a>.</p>
+    </div>
+</body>
+
+</html>

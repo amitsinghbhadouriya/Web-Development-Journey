@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units</title>
+  <style>
+    html {
+      color: black;
+      /* font-size: 34px;  sets base size for rem units */
+    }
+
+    .container {
+      color: black;
+      /* font-size: 12px;  sets base size for em inside this container */
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      /* font-size: 3em;   relative to parent (.container) font size 
+      /* font-size: 3rem;  relative to root (html) font size */
+      background-color: red;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .box2 {
+      background-color: aqua;
+      /* width: 334px;   absolute unit */
+      width: 50vw;     /* 50% of viewport width */
+      height: 50vh;    /* 50% of viewport height */
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .note {
+      margin-top: 30px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-left: 5px solid black;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: darkblue;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>CSS Units Demonstration</h2>
+
+    <div class="box">
+      This box can use <code>em</code> or <code>rem</code> units for font size.
+      <br><strong>Try uncommenting the CSS to test the difference!</strong>
+    </div>
+
+    <div class="box2">
+      This box uses <code>vw</code> and <code>vh</code> units to take 50% of the screen width and height.
+    </div>
+
+    <div class="note">
+      <h3>Common CSS Units:</h3>
+      <ul>
+        <li><strong>px (pixels):</strong> Fixed size unit.</li>
+        <li><strong>em:</strong> Relative to the font size of the parent element.</li>
+        <li><strong>rem:</strong> Relative to the font size of the root (html) element.</li>
+        <li><strong>%:</strong> Relative to the size of the parent container.</li>
+        <li><strong>vw (viewport width):</strong> 1vw = 1% of the viewport width.</li>
+        <li><strong>vh (viewport height):</strong> 1vh = 1% of the viewport height.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

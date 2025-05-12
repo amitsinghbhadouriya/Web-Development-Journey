@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transform & Animation Refined</title>
+  <style>
+    body {
+      background-color: #f9fafc;
+      margin: 0;
+      padding: 60px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #c5a5a5;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #1a202c;
+    }
+
+    .box {
+      display: inline-block;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .box:hover {
+      transform: translateY(-10px) scale(1.06);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    img {
+      width: 220px;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .properties {
+      background-color: #e4eaf0;
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .properties h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #055ef8;
+    }
+
+    .properties ul {
+      text-align: left;
+      font-size: 16px;
+      padding-left: 20px;
+      color: #121213;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Image Hover Animation</div>
+    <div class="box">
+      <img src="image.jpeg" alt="Animated image example" />
+    </div>
+    <div class="description">
+      Hover the image to experience a gentle zoom and elevation effect. This animation adds elegance and interactivity, enhancing user experience.
+    </div>
+  </div>
+
+  <div class="properties">
+    <h2>CSS Animation & Transform Properties</h2>
+    <ul>
+      <li><strong>transform:</strong> Applies changes like <em>scale</em>, <em>rotate</em>, <em>translate</em>.</li>
+      <li><strong>scale():</strong> Enlarges or shrinks an element.</li>
+      <li><strong>translateY():</strong> Moves element vertically.</li>
+      <li><strong>transition:</strong> Smooths property changes over time.</li>
+      <li><strong>box-shadow:</strong> Adds depth with shadows.</li>
+      <li><strong>animation:</strong> Runs predefined keyframe motion.</li>
+      <li><strong>@keyframes:</strong> Defines the animation stages.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

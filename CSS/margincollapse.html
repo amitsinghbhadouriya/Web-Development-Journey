@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Margin Collapse Explained</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      color: #333;
+    }
+
+    .description {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    /* Box styles for both sections */
+    .box {
+      height: 40px;
+      margin: 30px;
+      padding: 10px;
+      color: white;
+    }
+
+    /* Collapse example */
+    .collapse-example .box1 {
+      background-color: crimson;
+    }
+
+    .collapse-example .box2 {
+      background-color: steelblue;
+    }
+
+    /* No collapse example */
+    .no-collapse {
+      overflow: hidden; /* Prevents margin collapse */
+    }
+
+    .no-collapse .box1 {
+      background-color: darkgreen;
+    }
+
+    .no-collapse .box2 {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Margin Collapse in CSS</h1>
+  <p class="description">
+    <strong>What is margin collapse?</strong> Margin collapse occurs when the vertical margins of two block-level elements meet. Instead of adding together, only the larger margin is used. For example, if one element has a bottom margin of 30px and the next element has a top margin of 30px, the space between them will be just 30px — not 60px.
+  </p>
+
+  <!-- Section 1: Demonstrates collapsed margins -->
+  <div class="section">
+    <h2>1. Margin Collapse (Default Behavior)</h2>
+    <div class="collapse-example">
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+    </div>
+    <p class="description">
+      The vertical space between Box 1 and Box 2 is only <strong>30px</strong> due to margin collapse.
+    </p>
+  </div>
+
+  <!-- Section 2: Prevents margin collapse -->
+  <div class="section">
+    <h2>2. No Margin Collapse (Using overflow: hidden)</h2>
+    <div class="no-collapse">
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+    </div>
+    <p class="description">
+      Here, we use <code>overflow: hidden</code> on the parent container to prevent margin collapse. So the space between the boxes is <strong>60px</strong>.
+    </p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 36vh;
+            color: white;
+            background-color: red;
+            padding: 20px;
+        }
+
+        /* Media Query for devices with width 800px or less */
+        @media screen and (max-width: 800px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                background-color: yellow;
+                color: black;
+            }
+        }
+
+        .explanation {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .explanation h2 {
+            color: #333;
+        }
+
+        .explanation code {
+            background-color: #ddd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Responsive Design</h1>
+        <p>This section adjusts its colors based on your screen size using media queries. Resize your browser window to see it in action!</p>
+    </div>
+
+    <div class="explanation">
+        <h2>What is a Media Query?</h2>
+        <p>A <strong>media query</strong> is a CSS technique used to apply styles conditionally based on the user's device characteristics, like screen width, height, resolution, or orientation.</p>
+
+        <h3>Example Breakdown:</h3>
+        <ul>
+            <li><code>@media screen and (max-width: 800px)</code>: Targets screens that are 800px wide or less (like tablets or phones).</li>
+            <li><code>body { background-color: blue; }</code>: Changes the background color of the page when on smaller screens.</li>
+            <li><code>.container</code> changes from red/white text to yellow/black text on smaller screens.</li>
+        </ul>
+
+        <h3>Why Use Media Queries?</h3>
+        <ul>
+            <li>To make websites responsive and mobile-friendly.</li>
+            <li>To optimize layout and readability across devices.</li>
+            <li>To reduce the need for separate mobile websites.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Display Property Explained</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #007bff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 4px;
+    }
+
+    /* Example of display: block */
+    .block .box {
+      display: block; /* Each box takes up full width */
+    }
+
+    /* Example of display: inline */
+    .inline .box {
+      display: inline; /* Boxes sit next to each other horizontally */
+    }
+
+    /* Example of display: inline-block */
+    .inline-block .box {
+      display: inline-block; /* Boxes inline but can have width and height */
+      width: 100px;
+      height: 40px;
+      text-align: center;
+    }
+
+    /* Example of display: none */
+    .none .box {
+      display: none; /* This box is hidden completely */
+    }
+
+    /* Example of display: flex */
+    .flex { 
+      display: flex; /* Flex container for flexible layout */
+      gap: 10px;
+    }
+
+    /* Example of display: grid */
+    .grid {
+      display: grid; 
+      /* Creates a grid layout with 3 columns */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    /* Example of display: inline-flex */
+    .inline-flex { 
+      display: inline-flex; /* Flex container that behaves inline */ 
+      gap: 10px;
+      border: 1px dashed #333;
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Understanding CSS Display Property</h1>
+
+  <div class="section">
+    <h2>What is the Display Property?</h2>
+    <p>The <strong>display</strong> property in CSS determines how an element is visually represented and behaves in the layout flow of the document. It decides whether the element will appear as a block, inline, flex container, grid, or be completely hidden.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why Use It?</h2>
+    <ul>
+      <li>To control layout and positioning of elements</li>
+      <li>To align elements horizontally or vertically</li>
+      <li>To hide or show elements dynamically</li>
+      <li>To build responsive and flexible UI layouts</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Examples</h2>
+
+    <!-- Display: block -->
+    <h3>Display: block</h3>
+    <div class="block">
+      <div class="box">Block 1</div>
+      <div class="box">Block 2</div>
+    </div>
+
+    <!-- Display: inline -->
+    <h3>Display: inline</h3>
+    <div class="inline">
+      <span class="box">Inline 1</span>
+      <span class="box">Inline 2</span>
+    </div>
+
+    <!-- Display: inline-block -->
+    <h3>Display: inline-block</h3>
+    <div class="inline-block">
+      <div class="box">Inline-Block 1</div>
+      <div class="box">Inline-Block 2</div>
+    </div>
+
+    <!-- Display: none -->
+    <h3>Display: none</h3>
+    <div class="none">
+      <div class="box">This won't be seen</div>
+    </div>
+
+    <!-- Display: flex -->
+    <h3>Display: flex</h3>
+    <div class="flex">
+      <div class="box">Flex 1</div>
+      <div class="box">Flex 2</div>
+      <div class="box">Flex 3</div>
+    </div>
+
+    <!-- Display: grid -->
+    <h3>Display: grid</h3>
+    <div class="grid">
+      <div class="box">Grid 1</div>
+      <div class="box">Grid 2</div>
+      <div class="box">Grid 3</div>
+    </div>
+
+    <!-- Display: inline-flex -->
+    <h3>Display: inline-flex</h3>
+    <div class="inline-flex">
+      <div class="box">Inline-Flex 1</div>
+      <div class="box">Inline-Flex 2</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <h2>Summary Table</h2>
+    <table>
+      <tr>
+        <th>Display Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>block</td>
+        <td>Starts on a new line, takes up full width</td>
+      </tr>
+      <tr>
+        <td>inline</td>
+        <td>Stays on the same line, width/height cannot be set</td>
+      </tr>
+      <tr>
+        <td>inline-block</td>
+        <td>Inline position with block features (width/height)</td>
+      </tr>
+      <tr>
+        <td>none</td>
+        <td>Completely hides the element from layout</td>
+      </tr>
+      <tr>
+        <td>flex</td>
+        <td>Creates a 1D flexible layout (row or column)</td>
+      </tr>
+      <tr>
+        <td>grid</td>
+        <td>Creates a 2D grid layout</td>
+      </tr>
+      <tr>
+        <td>inline-flex</td>
+        <td>Same as flex but acts like an inline element</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

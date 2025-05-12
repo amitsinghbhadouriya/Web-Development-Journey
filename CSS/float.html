@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .box1 {
+            height: 234px;
+            width: 345px;
+            background-color: blue;
+            float: left;
+            margin-right: 20px;
+            color: white;
+            text-align: center;
+            line-height: 234px;
+            font-size: 20px;
+        }
+
+        .box2 {
+            height: 234px;
+            width: 345px;
+            background-color: red;
+            float: right;
+            margin-left: 20px;
+            color: white;
+            text-align: center;
+            line-height: 234px;
+            font-size: 20px;
+        }
+
+        .content {
+            clear: both;
+            background-color: lightgray;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .content h3 {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .content ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .content ul li {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h2>This is the content below the floated boxes</h2>
+        <p>The content here will clear both the floated boxes (Box 1 and Box 2), so it appears below them and will not overlap.</p>
+        
+        <h3>Understanding the float property</h3>
+        <p>The <code>float</code> property is used to position elements to the left or right of their container. Elements with <code>float: left;</code> will align to the left, while those with <code>float: right;</code> will align to the right. Other content in the container will wrap around the floated elements.</p>
+        
+        <h4>Usage:</h4>
+        <ul>
+            <li><strong>float: left;</strong>: Positions the element to the left of the container, allowing text or other content to wrap around it.</li>
+            <li><strong>float: right;</strong>: Positions the element to the right of the container, allowing text or other content to wrap around it.</li>
+        </ul>
+
+        <h4>Clear Property:</h4>
+        <p>To prevent content from wrapping around floated elements, we use the <code>clear</code> property. Setting <code>clear: both;</code> ensures that the content is placed below the floated elements and doesn't overlap them.</p>
+    </div>
+
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+
+</body>
+</html>
