@@ -1,3 +1,3 @@
 # Full Development Journey
 
-Contains Explain through code
+Contains Explanation through code
